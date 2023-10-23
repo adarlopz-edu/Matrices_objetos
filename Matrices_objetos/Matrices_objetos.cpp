@@ -9,9 +9,10 @@ using namespace std;
 
 class Matriz {
 private:
+
     int filas;
     int columnas;
-    //tamaño de la matriz
+    //tamaÃ±o de la matriz
 
 public: //metodos
     Matriz(int, int);//constructor
@@ -34,7 +35,19 @@ void Matriz::multiplicacion(Matriz B) {
 
 }
 
-bool validarInput(string fraccion, int& numerador, int& denominador) {
+bool validarInputFC(int tipoOperacion) {
+
+    if (tipoOperacion == 1) {//suma
+        
+    }
+
+    if (tipoOperacion == 2) {//Resta
+
+    }
+
+    if (tipoOperacion == 3) {//Multiplicacion
+
+    }
 
     //if sumas
     // if es resta
@@ -46,9 +59,8 @@ void ingresoDeDatos() {
 
     int filasA, columnasA, filasB, columnasB;
 
-
     cout << "Matriz A" << endl;
-    cout << "Filas: "   << endl;
+    cout << "Filas: " << endl;
     cin >> filasA;
     cout << "Columnas: " << endl;
     cin >> columnasA;
@@ -58,6 +70,11 @@ void ingresoDeDatos() {
     cin >> filasB;
     cout << "Columnas: " << endl;
     cin >> columnasB;
+
+    Matriz A(filasA, columnasA);
+    Matriz B(filasB, columnasB);
+
+    cout <<
 
 }
 
@@ -75,6 +92,9 @@ int main() {
     switch (tipoOperacion) {
     case 1:
         cout << endl << "Suma" << endl;
+        ingresoDeDatos();
+        validarInputFC(tipoOperacion);
+
 
         break;
 
